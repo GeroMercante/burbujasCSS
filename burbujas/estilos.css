@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', 'Sans serif';
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h3{
+    color: white;
+    padding-right: 450px;
+    padding-top: 20px;
+    animation: bgColorPrimary ease-in 5s infinite;
+}
+
+.contenedor a:hover{
+    color: rgb(255, 255, 255);
+    transition: 1.5s;
+}
+
+.bg_animate{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,#ffffff, #d61ecd);
+    position: relative;
+    overflow: hidden;
+}
+
+.header_nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_nav .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header_nav h1{
+    color: rgb(0, 0, 0);
+    font-family: 'Gagalin';
+    animation: bgColorSecondary ease-in 5s infinite;
+}
+
+.header_nav nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.banner_title h2{
+    color: rgb(0, 0, 0);
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: bgColorSecondary ease-in 5s infinite;
+    font-family: cursive;
+}
+
+.banner_title .llamanos{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner_title .llamanos:hover {
+    background-color: palevioletred;
+    color:#000000;
+    transition: 1.5s;
+}
+
+.banner_img{
+    animation: movimiento 3s linear infinite;  /*Creando animacion denominada movimiento*/
+}
+
+.banner_img img{
+    width: 600px;
+    display: block;
+}
+
+/* burbujas */
+
+.burbuja{
+    border-radius: 50%;
+    background: rgb(189, 3, 196);
+    opacity: 0.5;
+
+    position: absolute;
+    bottom: -150;
+    
+    animation: burbujas 3s linear infinite ;  /*Creando animacion denominada BURBUJAS @keyframes*/
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+.burbuja:nth-child(11){
+    width: 70px;
+    height: 70px;
+    left: 15%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes bgColorPrimary {
+    0% {
+        color: rgb(246, 246, 246);
+        opacity: 0.5;
+    }
+    25% {
+        color: rgb(238, 86, 236);
+        opacity: 0.5;
+    }
+    50% {
+        color: rgb(236, 16, 203);
+        opacity: 0.5;
+    }
+    75%{
+        color: rgb(238, 86, 236);
+        opacity: 0.5;
+    }
+
+    100%{
+        color:white;
+        opacity: 0.5;
+    }
+}
+
+@keyframes bgColorSecondary {
+    0%{
+        color: #000000;
+        opacity: 0.5s;
+    }
+    25%{
+        color: #d61ecd;
+        opacity: 0.5s;
+    }
+    50%{
+        color:rgb(242, 242, 242);
+    }
+    75%{
+        color: #d61ecd;
+    }
+    100%{
+        color: black;
+    }
+}
